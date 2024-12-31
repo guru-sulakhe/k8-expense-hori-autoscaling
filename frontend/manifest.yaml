@@ -124,6 +124,13 @@ spec:
     spec:
     - name: frontend
       image: guru1188/frontend:v1.0
+      resources: #horizontal autoscaling
+        requests:
+          cpu: "100m"
+          memory: "128Mi"
+        limits: #limits should be greater or equal to requests
+          cpu: "150m"
+          memory: "256Mi"
       # mounting volume nginx-conf
       volumeMounts:
       - name: nginx-conf
