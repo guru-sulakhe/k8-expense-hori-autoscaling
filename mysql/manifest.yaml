@@ -1,0 +1,48 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mysql
+  #creating mysql in expense namespace
+  namespace: expense
+  #thus labels are deployment related labels
+  labels:
+    component: mysql
+    project: expense
+    tier: db
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      component: mysql
+      tier: db
+      project: expense
+  #pod defintion
+  template:
+    metadata:
+      labels:
+        component: mysql
+        tier: db
+        project: expense
+    spec:
+    - name: mysql
+      image: guru1188/mysql:v1.0
+
+------
+# for connection mysql and backend pods we need to ensure to include a service which will helps in communication between pods i.,e Cluster IP
+# This service is used to call mysql Pod
+apiVersion: v1
+kind: Service
+metadata: 
+  name: mysql
+  #attaching to expense namespace
+  namespace: expense
+spec: 
+  selectors:
+    project: expense
+    component: mysql
+    tier: db
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    
