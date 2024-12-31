@@ -36,6 +36,13 @@ spec:
     spec:
     - name: backend
       image: guru1188/backend:v1.0
+      resources: #horizontal autoscaling
+        requests:
+          cpu: "100m"
+          memory: "128Mi"
+        limits: #limits should be greater or equal to requests
+          cpu: "150m"
+          memory: "256Mi"
       envFrom:
       - configMapRef:
           name: backend
