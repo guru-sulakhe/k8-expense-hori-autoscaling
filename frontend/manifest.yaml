@@ -124,7 +124,7 @@ spec:
     spec:
     - name: frontend
       image: guru1188/frontend:v1.0
-      resources: #horizontal autoscaling
+      resources: #resource utilization
         requests:
           cpu: "100m"
           memory: "128Mi"
