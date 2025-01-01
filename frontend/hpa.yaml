@@ -1,4 +1,4 @@
-#Horizontal Autoscaling
+#Horizontal Pod Autoscaling
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
