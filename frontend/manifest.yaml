@@ -137,8 +137,6 @@ spec:
         mountPath: /etc/nginx/nginx.conf
         subPath: nginx.conf
         readOnly: true
-      volumes:
-      - name: nginx-conf
       # envFrom:
       # - configMapRef:
       #     name: frontend
