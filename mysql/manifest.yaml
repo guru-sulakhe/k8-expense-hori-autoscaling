@@ -24,8 +24,9 @@ spec:
         tier: db
         project: expense
     spec:
-    - name: mysql
-      image: guru1188/mysql:v1.0
+      containers:
+      - name: mysql
+        image: guru1188/mysql:v1.0
 
 ------
 # for connection mysql and backend pods we need to ensure to include a service which will helps in communication between pods i.,e Cluster IP
