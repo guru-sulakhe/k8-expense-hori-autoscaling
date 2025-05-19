@@ -68,3 +68,6 @@ spec:
     port: 8080
     targetPort: 8080
     
+#Install Metric server
+# $ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+# $ kubectl top pod
