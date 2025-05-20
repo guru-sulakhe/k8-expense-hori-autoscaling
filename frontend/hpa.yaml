@@ -1,4 +1,5 @@
 #Horizontal Pod Autoscaling is used to create new nodes based on the cpu utilization of each node
+#Horizontal Pod Autoscaler should be attached to the deployment 
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
