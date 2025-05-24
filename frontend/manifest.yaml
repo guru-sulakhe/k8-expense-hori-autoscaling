@@ -95,7 +95,7 @@ data:
           }
 
       }
---------
+---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -149,8 +149,7 @@ spec:
           - key: nginx.conf
             path: nginx.conf
 
-
-------
+---
 # for connection mysql and backend pods we need to ensure to include a service, which will helps in communication between pods i.,e LoadBalancer
 # This service helps in configuring ports and also helps to call frontend pod
 apiVersion: v1
