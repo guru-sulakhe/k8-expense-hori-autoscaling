@@ -2,8 +2,10 @@
 # Metric server is responsible for measuring the memory consumption of the pods in kubernetes.
 # to install metric server run this command:
 # kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+# 1.Install Metric Server
 # $ kubectl top pod
-
+# 2.resource definition inside pod
+# #.HPA should be attached to the deployment
 #Horizontal Pod Autoscaling is used to create new nodes based on the cpu utilization of each node
 #Horizontal Pod Autoscaler should be attached to the deployment 
 apiVersion: autoscaling/v2
