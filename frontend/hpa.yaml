@@ -5,7 +5,7 @@
 # 1.Install Metric Server
 # $ kubectl top pod
 # 2.resource definition inside pod
-# #.HPA should be attached to the deployment
+# 3.HPA should be attached to the deployment
 #Horizontal Pod Autoscaling is used to create new nodes based on the cpu utilization of each node
 #Horizontal Pod Autoscaler should be attached to the deployment 
 apiVersion: autoscaling/v2
